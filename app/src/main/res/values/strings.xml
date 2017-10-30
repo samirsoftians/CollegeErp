@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CollegeErp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_feedback">Feedback</string>
+    <string name="action_contactus">Contact Us</string>
+    <string name="action_Email">Email Us</string>
+
+</resources>
