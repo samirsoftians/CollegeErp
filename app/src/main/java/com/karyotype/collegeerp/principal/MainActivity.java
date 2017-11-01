@@ -1,4 +1,4 @@
-package com.karyotype.collegeerp;
+package com.karyotype.collegeerp.principal;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,7 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -18,18 +19,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.karyotype.collegeerp.MyAdapter;
+import com.karyotype.collegeerp.R;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
+/**
+ * Created by Lenovo on 11/1/2017.
+ */
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-//========================================================================================
-private static ViewPager mPager;
+    //========================================================================================
+    private static ViewPager mPager;
     private static int currentPage = 0;
     private static final Integer[] XMEN= {R.drawable.i1,R.drawable.i2,R.drawable.i3,R.drawable.lo};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
@@ -38,12 +46,15 @@ private static ViewPager mPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        init();//=====================================================
-        initCollapsingToolbar();
+
+
+
+       // init();//=====================================================
+      //  initCollapsingToolbar();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +79,25 @@ private static ViewPager mPager;
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+
+        //********Fragment***********************
+
+        ForgetPassword myJob = new ForgetPassword();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content_frame, myJob);
+        fragmentTransaction.commit();
+
+        //************Fragment ends***********************
+
+
+
+
+
+
     }
 
     //===========================================Image slider code=======================================================================================
@@ -76,7 +106,7 @@ private static ViewPager mPager;
             XMENArray.add(XMEN[i]);
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new MyAdapter(MainActivity.this,XMENArray));
+        mPager.setAdapter(new MyAdapter(com.karyotype.collegeerp.principal.MainActivity.this,XMENArray));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
@@ -146,18 +176,11 @@ private static ViewPager mPager;
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_principal) {
-            Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
-            startActivity(sc);
-        } else if (id == R.id.nav_HoD) {
+        if (id == R.id.nav_notice) {
+            // Handle the camera action
+        } else if (id == R.id.nav_attendence) {
 
-        } else if (id == R.id.nav_Teacher) {
-
-        } else if (id == R.id.nav_Student) {
-
-        } else if (id == R.id.nav_Alumini) {
-
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_teacher) {
 
         }
 
@@ -199,7 +222,4 @@ private static ViewPager mPager;
             }
         });
     }
-
-//================================================================================================================================
-
 }

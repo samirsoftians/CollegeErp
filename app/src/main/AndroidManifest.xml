@@ -27,6 +27,9 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme"/>
 
+        <activity android:name=".principal.MainActivity"/>
+        <activity android:name=".principal.Login"/>
+
     </application>
 
 </manifest>
