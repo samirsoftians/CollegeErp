@@ -26,5 +26,7 @@ public class Splash extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         finish();
+        //testing the projcet so as it can sink properly
+
     }
 }
