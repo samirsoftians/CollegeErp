@@ -1,6 +1,9 @@
 package com.karyotype.collegeerp.principal;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -36,6 +39,7 @@ public class ImageAdapter extends BaseAdapter {
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
+//        TextView textView;
 
         if (convertView == null) {
             imageView = new ImageView(mContext);
@@ -56,11 +60,61 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.i1, R.drawable.i2,
             R.drawable.i3, R.drawable.angle,
             R.drawable.i1, R.drawable.i2,
-            R.drawable.i3, R.drawable.angle,
-            R.drawable.i1, R.drawable.i2,
-            R.drawable.i3, R.drawable.angle,
-            R.drawable.i1, R.drawable.i2,
-            R.drawable.i3, R.drawable.angle,
+
+
 
     };
+    public String[] txtIds = {
+            "notice", "abc",
+            "def", "ghi",
+            "jkl", "lmn",
+
+
+
+    };
+
+
+    public void onBackPressed() {
+
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
+//            super.onBackPressed();
+//        }
+
+        //super.onBackPressed();
+        Log.d("back button", "back button pressed");
+        AlertDialog.Builder ad1 = new AlertDialog.Builder(mContext);
+        ad1.setMessage("Are you sure you want to exit ?");
+        ad1.setCancelable(false);
+
+
+        ad1.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+
+
+            }
+        });
+
+        ad1.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+
+
+//                Intent intent = new Intent(Intent.ACTION_MAIN);
+//                intent.addCategory(Intent.CATEGORY_HOME);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//***Change Here***
+//                startActivity(intent);
+//                finish();
+//                System.exit(0);
+//
+
+
+            }
+        });
+        AlertDialog alert = ad1.create();
+        alert.show();
+    }
 }

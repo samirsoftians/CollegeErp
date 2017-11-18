@@ -29,6 +29,8 @@
 
         <activity android:name=".principal.MainActivity"/>
         <activity android:name=".principal.Login"/>
+        <activity android:name=".principal.PrincipalRegistration"/>
+
 
     </application>
 

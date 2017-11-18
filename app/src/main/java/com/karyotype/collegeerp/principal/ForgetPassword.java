@@ -19,7 +19,31 @@ import com.karyotype.collegeerp.R;
 
 public class ForgetPassword extends Fragment {
 
-    GridView gridview;
+
+
+    GridView grid;
+    String[] web = {
+            "Google",
+            "Github",
+            "Instagram",
+            "Facebook",
+            "Flickr",
+            "Pinterest",
+
+
+    } ;
+    int[] imageId = {
+            R.drawable.i3,
+            R.drawable.i2,
+            R.drawable.i1,
+            R.drawable.i1,
+            R.drawable.i1,
+            R.drawable.i2,
+
+
+    };
+
+    //GridView gridview;
 
     @Nullable
     @Override
@@ -32,21 +56,40 @@ public class ForgetPassword extends Fragment {
 // =============================================================================================================
 
 
-         gridview = (GridView) v.findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(getContext()));
+//         gridview = (GridView) v.findViewById(R.id.gridview);
+//        gridview.setAdapter(new ImageAdapter(getContext()));
+//
+//        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            public void onItemClick(AdapterView<?> parent,
+//                                    View v, int position, long id){
+//
+//                Toast.makeText(getContext(), "you clicked", Toast.LENGTH_SHORT).show();
+//                // Send intent to SingleViewActivity
+////                Intent i = new Intent(getContext(), SingleViewActivity.class);
+////                // Pass image index
+////                i.putExtra("id", position);
+////                startActivity(i);
+//            }
+//        });
 
-        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent,
-                                    View v, int position, long id){
 
-                Toast.makeText(getContext(), "you clicked", Toast.LENGTH_SHORT).show();
-                // Send intent to SingleViewActivity
-//                Intent i = new Intent(getContext(), SingleViewActivity.class);
-//                // Pass image index
-//                i.putExtra("id", position);
-//                startActivity(i);
+
+        CustomGrid adapter = new CustomGrid(getContext(), web, imageId);
+        grid=(GridView)v.findViewById(R.id.grid);
+        grid.setAdapter(adapter);
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                Toast.makeText(getContext(), "You Clicked at " +web[+ position], Toast.LENGTH_SHORT).show();
+
             }
         });
+
+
+
+
         return v;
 
 

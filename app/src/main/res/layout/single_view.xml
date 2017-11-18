@@ -6,5 +6,10 @@
     <ImageView android:id="@+id/SingleView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>
+    <TextView
+        android:id="@+id/text_details"
+        android:text="abc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 
 </LinearLayout>

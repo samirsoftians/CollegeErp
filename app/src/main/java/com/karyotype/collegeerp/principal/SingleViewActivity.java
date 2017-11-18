@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.karyotype.collegeerp.R;
 
@@ -25,6 +26,8 @@ public class SingleViewActivity extends Activity {
         ImageAdapter imageAdapter = new ImageAdapter(this);
 
         ImageView imageView = (ImageView) findViewById(R.id.SingleView);
+        TextView textView=(TextView) findViewById(R.id.text_details);
         imageView.setImageResource(imageAdapter.mThumbIds[position]);
+        textView.setText(imageAdapter.mThumbIds[position]);
     }
 }
