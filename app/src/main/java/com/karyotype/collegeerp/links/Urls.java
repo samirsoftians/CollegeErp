@@ -10,6 +10,7 @@ public class Urls {
 
     public static String principalRegistration=links+"principal_register.php";
     public static String principalLogin=links+"principal_login.php";
+    public static String studentlLogin=links+"student_login.php";
 
 
 }

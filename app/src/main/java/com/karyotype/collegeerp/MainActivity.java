@@ -21,6 +21,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.karyotype.collegeerp.links.Variables;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -151,17 +153,33 @@ private static ViewPager mPager;
         //.
 
         if (id == R.id.nav_principal) {
+            Variables.whoLogin="principal";
             Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
             startActivity(sc);
         } else if (id == R.id.nav_HoD) {
+            Variables.whoLogin="hod";
+            Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
+            startActivity(sc);
 
         } else if (id == R.id.nav_Teacher) {
+            Variables.whoLogin="teacher";
+            Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
+            startActivity(sc);
 
         } else if (id == R.id.nav_Student) {
+            Variables.whoLogin="student";
+            Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
+            startActivity(sc);
 
         } else if (id == R.id.nav_Alumini) {
+            Variables.whoLogin="alu";
+            Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
+            startActivity(sc);
 
         } else if (id == R.id.nav_gallery) {
+            Variables.whoLogin="galary";
+            Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
+            startActivity(sc);
 
         }
 

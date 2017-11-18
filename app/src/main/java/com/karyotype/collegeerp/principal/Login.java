@@ -23,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.karyotype.collegeerp.R;
 import com.karyotype.collegeerp.links.Urls;
+import com.karyotype.collegeerp.links.Variables;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +38,7 @@ public class Login extends AppCompatActivity{
     TextView login_signup1,login_signup2;
     EditText p_user_name,p_login_password;
     int valid=0;
+    String url,userName,Password;
 
 
     @Override
@@ -112,7 +114,33 @@ public class Login extends AppCompatActivity{
 
     public void checkLogin()
     {
-        StringRequest request = new StringRequest(Request.Method.POST, Urls.principalLogin, new Response.Listener<String>() {
+
+
+        if(Variables.whoLogin.equals("principal"))
+        {
+             url=Urls.principalLogin;
+             userName="p_user_name";
+             Password="p_password";
+        }
+        if(Variables.whoLogin.equals("hod"))
+        {
+            url=Urls.studentlLogin;
+            userName="s_user_name";
+            Password="s_password";
+        }
+        if(Variables.whoLogin.equals("teacher"))
+        {
+            url=Urls.principalLogin;
+            userName="t_user_name";
+            Password="t_password";
+        }
+        if(Variables.whoLogin.equals("student"))
+        {
+            url=Urls.studentlLogin;
+            userName="s_user_name";
+            Password="s_password";
+        }
+        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -160,9 +188,9 @@ public class Login extends AppCompatActivity{
 
 
 
-                parameters.put("p_user_name", p_user_name.getText().toString());
+                parameters.put(userName, p_user_name.getText().toString());
 
-                parameters.put("p_password", p_login_password.getText().toString());
+                parameters.put(Password, p_login_password.getText().toString());
 
 
                 return parameters;

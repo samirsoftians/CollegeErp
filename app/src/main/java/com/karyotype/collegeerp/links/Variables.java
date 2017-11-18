@@ -5,4 +5,5 @@ package com.karyotype.collegeerp.links;
  */
 
 public class Variables {
+    public static String whoLogin;
 }
