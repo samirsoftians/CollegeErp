@@ -148,6 +148,7 @@ private static ViewPager mPager;
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        //.
 
         if (id == R.id.nav_principal) {
             Intent sc=new Intent(MainActivity.this,com.karyotype.collegeerp.principal.Login.class);
