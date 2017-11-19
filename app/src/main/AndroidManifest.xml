@@ -30,6 +30,9 @@
         <activity android:name=".principal.MainActivity"/>
         <activity android:name=".principal.Login"/>
         <activity android:name=".principal.PrincipalRegistration"/>
+        <activity android:name=".Student"/>
+        <activity android:name=".teacher.Teacher"/>
+        <activity android:name=".hod.HodRegistration"/>
 
 
     </application>

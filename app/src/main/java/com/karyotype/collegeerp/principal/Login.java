@@ -22,8 +22,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.karyotype.collegeerp.R;
+import com.karyotype.collegeerp.Student;
 import com.karyotype.collegeerp.links.Urls;
 import com.karyotype.collegeerp.links.Variables;
+import com.karyotype.collegeerp.teacher.Teacher;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -79,8 +81,30 @@ public class Login extends AppCompatActivity{
         login_signup1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent=new Intent(Login.this,PrincipalRegistration.class);
-               startActivity(intent);
+
+                if(Variables.whoLogin.equals("principal"))
+                {
+                    Intent intent=new Intent(Login.this,PrincipalRegistration.class);
+                    startActivity(intent);
+                }
+                if(Variables.whoLogin.equals("hod"))
+                {
+                    url=Urls.studentlLogin;
+                    userName="s_user_name";
+                    Password="s_password";
+                }
+                if(Variables.whoLogin.equals("teacher"))
+                {
+                    url=Urls.principalLogin;
+                    userName="t_user_name";
+                    Password="t_password";
+                }
+                if(Variables.whoLogin.equals("student"))
+                {
+                    Intent intent=new Intent(Login.this,Student.class);
+                    startActivity(intent);
+                }
+
             }
         });
 
@@ -88,8 +112,29 @@ public class Login extends AppCompatActivity{
         login_signup2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login.this,PrincipalRegistration.class);
-                startActivity(intent);
+
+                if(Variables.whoLogin.equals("principal"))
+                {
+                    Intent intent=new Intent(Login.this,PrincipalRegistration.class);
+                    startActivity(intent);
+                }
+                if(Variables.whoLogin.equals("hod"))
+                {
+                    url=Urls.studentlLogin;
+                    userName="s_user_name";
+                    Password="s_password";
+                }
+                if(Variables.whoLogin.equals("teacher"))
+                {
+                    Intent intent=new Intent(Login.this,Teacher.class);
+                    startActivity(intent);
+                }
+                if(Variables.whoLogin.equals("student"))
+                {
+                    Intent intent=new Intent(Login.this,Student.class);
+                    startActivity(intent);
+                }
+
             }
         });
 
