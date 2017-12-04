@@ -23,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.karyotype.collegeerp.R;
 import com.karyotype.collegeerp.Student;
+import com.karyotype.collegeerp.hod.HodRegistration;
 import com.karyotype.collegeerp.links.Urls;
 import com.karyotype.collegeerp.links.Variables;
 import com.karyotype.collegeerp.teacher.Teacher;
@@ -89,15 +90,13 @@ public class Login extends AppCompatActivity{
                 }
                 if(Variables.whoLogin.equals("hod"))
                 {
-                    url=Urls.studentlLogin;
-                    userName="s_user_name";
-                    Password="s_password";
+                    Intent intent=new Intent(Login.this,HodRegistration.class);
+                    startActivity(intent);
                 }
                 if(Variables.whoLogin.equals("teacher"))
                 {
-                    url=Urls.principalLogin;
-                    userName="t_user_name";
-                    Password="t_password";
+                    Intent intent=new Intent(Login.this,Teacher.class);
+                    startActivity(intent);
                 }
                 if(Variables.whoLogin.equals("student"))
                 {
@@ -120,9 +119,8 @@ public class Login extends AppCompatActivity{
                 }
                 if(Variables.whoLogin.equals("hod"))
                 {
-                    url=Urls.studentlLogin;
-                    userName="s_user_name";
-                    Password="s_password";
+                    Intent intent=new Intent(Login.this,HodRegistration.class);
+                    startActivity(intent);
                 }
                 if(Variables.whoLogin.equals("teacher"))
                 {
@@ -169,19 +167,19 @@ public class Login extends AppCompatActivity{
         }
         if(Variables.whoLogin.equals("hod"))
         {
-            url=Urls.studentlLogin;
-            userName="s_user_name";
-            Password="s_password";
+            url=Urls.hodLogin;
+            userName="h_user_name";
+            Password="h_password";
         }
         if(Variables.whoLogin.equals("teacher"))
         {
-            url=Urls.principalLogin;
+            url=Urls.teacherLogin;
             userName="t_user_name";
             Password="t_password";
         }
         if(Variables.whoLogin.equals("student"))
         {
-            url=Urls.studentlLogin;
+            url=Urls.studentLogin;
             userName="s_user_name";
             Password="s_password";
         }

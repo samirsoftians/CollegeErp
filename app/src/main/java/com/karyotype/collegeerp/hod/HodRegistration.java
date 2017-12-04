@@ -202,9 +202,9 @@ public class HodRegistration extends AppCompatActivity {
 
                 parameters.put("h_name", h_name.getText().toString());
                 parameters.put("h_user_name", h_user_name.getText().toString());
-                parameters.put("t_contact", h_mobile.getText().toString());
-                parameters.put("t_email", h_email.getText().toString());
-                parameters.put("t_password", h_password.getText().toString());
+                parameters.put("h_contact", h_mobile.getText().toString());
+                parameters.put("h_email", h_email.getText().toString());
+                parameters.put("h_password", h_password.getText().toString());
 
 
                 return parameters;

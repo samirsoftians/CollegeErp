@@ -52,25 +52,7 @@ public class ForgetPassword extends Fragment {
         View v = inflater.inflate(R.layout.notice, container, false);
 
 
-//
-// =============================================================================================================
 
-
-//         gridview = (GridView) v.findViewById(R.id.gridview);
-//        gridview.setAdapter(new ImageAdapter(getContext()));
-//
-//        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            public void onItemClick(AdapterView<?> parent,
-//                                    View v, int position, long id){
-//
-//                Toast.makeText(getContext(), "you clicked", Toast.LENGTH_SHORT).show();
-//                // Send intent to SingleViewActivity
-////                Intent i = new Intent(getContext(), SingleViewActivity.class);
-////                // Pass image index
-////                i.putExtra("id", position);
-////                startActivity(i);
-//            }
-//        });
 
 
 

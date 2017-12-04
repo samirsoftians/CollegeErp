@@ -23,6 +23,7 @@ import com.android.volley.toolbox.Volley;
 import com.karyotype.collegeerp.links.Urls;
 import com.karyotype.collegeerp.principal.Login;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -42,6 +43,9 @@ public class Student extends AppCompatActivity {
 
     EditText s_name,s_roll,s_email,s_mobile,s_user_name,s_password,s_confirm_password,s_address,s_division,s_year,s_branch,s_shift;
     Button s_submit;
+    //Spinner s_division,s_year,s_branch,s_shift;
+
+    private ArrayList<String> students2,students3,students4,students5;
 
 
     @Override
@@ -49,8 +53,22 @@ public class Student extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_registration);
 
+//        students2=new ArrayList<String>();
+//        students3=new ArrayList<String>();
+//        students4=new ArrayList<String>();
+//        students5=new ArrayList<String>();
+//
+//
+//
+//
+//
+//        s_year= (Spinner) findViewById(R.id.s_year);
+//        s_branch= (Spinner) findViewById(R.id.s_branch);
+//        s_shift= (Spinner) findViewById(R.id.s_shift);
+//        s_division= (Spinner) findViewById(R.id.s_division);
+
         s_name= (EditText) findViewById(R.id.s_name);
-        s_year= (EditText) findViewById(R.id.s_year);
+       s_year= (EditText) findViewById(R.id.s_year);
         s_branch= (EditText) findViewById(R.id.s_branch);
         s_shift= (EditText) findViewById(R.id.s_shift);
         s_division= (EditText) findViewById(R.id.s_division);
@@ -64,6 +82,31 @@ public class Student extends AppCompatActivity {
         s_submit= (Button) findViewById(R.id.s_submit);
 
 
+
+
+
+
+//        students2.add("1st");
+//        students2.add("2nd");
+//
+//
+//        students3.add("a");
+//        students3.add("b");
+//
+//
+//        students4.add("c");
+//        students4.add("d");
+//
+//
+//        students4.add("e");
+//        students4.add("f");
+
+
+
+
+//        location2.setAdapter(new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_dropdown_item, students2));
+//        Variables.location=location2.getSelectedItem().toString();
+//        location2.setSelection(students2.indexOf(Variables.location));
 
 
 

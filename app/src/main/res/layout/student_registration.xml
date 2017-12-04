@@ -31,10 +31,10 @@
 
 
         <LinearLayout
-            android:layout_marginTop="30dp"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name6"
@@ -43,87 +43,85 @@
                 android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-
                     android:id="@+id/s_name"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="Name"
                     android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
-
-
-            <android.support.design.widget.TextInputLayout
-                android:textColorHint="#fff"
-                android:id="@+id/input_layout_name9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
-
-                    android:id="@+id/s_user_name"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="20dp"
-                    android:hint="User Name"
-                    android:textColor="#fff"                android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.design.widget.TextInputLayout>
-
-
-
-            <android.support.design.widget.TextInputLayout
-                android:textColorHint="#fff"
-                android:id="@+id/input_layout_name100"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
-
-                    android:id="@+id/s_roll"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="20dp"
-                    android:hint="Roll"
-                    android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.design.widget.TextInputLayout>
-
 
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name7"
-                android:textColorHint="#fff"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
-
                     android:id="@+id/s_email"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="Email"
                     android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_name9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/s_user_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="User Name"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_name100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/s_roll"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Roll"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -131,42 +129,42 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name8"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
                     android:id="@+id/s_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="Mobile"
                     android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name101"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
                     android:id="@+id/s_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="Address"
                     android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -174,21 +172,22 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name102"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
                     android:id="@+id/s_division"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="Division"
                     android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
+
 
             </android.support.design.widget.TextInputLayout>
 
@@ -196,46 +195,44 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name200"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
                     android:id="@+id/s_shift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="Shift"
                     android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
-
-
 
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name103"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
-
                     android:id="@+id/s_year"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="year"
                     android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -243,47 +240,41 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name104"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
-                    android:textColorHint="#fff"
                     android:id="@+id/s_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:hint="Branch"
                     android:textColor="#fff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
-
-
-
-
-
-
 
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name10"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
                     android:id="@+id/s_password"
                     android:layout_width="match_parent"
-                    android:inputType="textPassword"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="Password"
+                    android:inputType="textPassword"
 
                     android:textColor="#fff"
                     android:textColorHint="#fff"
@@ -295,39 +286,38 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_name111"
                 android:layout_width="match_parent"
-                android:textColorHint="#fff"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff">
 
                 <EditText
-                    app:backgroundTint="#fff"
                     android:id="@+id/s_confirm_password"
-                    android:inputType="textPassword"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="Confirm Password"
+                    android:inputType="textPassword"
                     android:textColor="#fff"
-                    android:textColorHint="#fff" />
+                    android:textColorHint="#fff"
+                    app:backgroundTint="#fff" />
 
             </android.support.design.widget.TextInputLayout>
 
 
-
             <Button
-                android:textColor="#fff"
                 android:id="@+id/s_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
                 android:layout_marginTop="10dp"
-                android:hint="Submit"
                 android:background="@drawable/angle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:hint="Submit"
+                android:textColor="#fff" />
         </LinearLayout>
     </LinearLayout>
 
